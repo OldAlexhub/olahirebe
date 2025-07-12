@@ -17,6 +17,7 @@ import {
 import {
   GetApplication,
   GetApplicationsCompany,
+  UpdateApplicationStatus,
 } from "../controllers/Post&GetApplications.js";
 import {
   adminLogin,
@@ -46,5 +47,9 @@ router.post("/postajob", PostAJob);
 router.get("/getonecompanyjobs/:company", GetAJobCompany);
 router.delete("/deletejob/:job_number", DeleteJob);
 router.get("/applicantcompany/:company", GetApplicationsCompany);
+router.put(
+  "/updateapplicantstatus/:userId/:jobNumber",
+  UpdateApplicationStatus
+);
 
 export default router;
